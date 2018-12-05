@@ -10,9 +10,10 @@ from keras.utils import Sequence
 from keras.callbacks import TensorBoard, LambdaCallback
 from datetime import datetime
 from sklearn.metrics import recall_score
+import os
 
 class TrainValTensorBoard(TensorBoard):
-    def __init__(self, log_dir='./logs', **kwargs):
+    def __init__(self, log_dir='./logs/', **kwargs):
         # Make the original `TensorBoard` log to a subdirectory 'training'
         training_log_dir = os.path.join(log_dir, 'training')
         super(TrainValTensorBoard, self).__init__(training_log_dir, **kwargs)

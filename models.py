@@ -89,9 +89,9 @@ def lstm_model_generator(n_timesteps, n_features, n_outputs, provided_input=None
         x = provided_input
 
     # LSTM
-    lstm_1 = LSTM(100, activation='relu', input_shape=(n_timesteps, n_features))(x)
+    lstm_1 = LSTM(200, activation='relu', input_shape=(n_timesteps, n_features))(x)
     lstm_2 = Dropout(0.5)(lstm_1)
-    lstm_3 = Dense(100, activation='relu')(lstm_2)
+    lstm_3 = Dense(150, activation='relu')(lstm_2)
     lstm_4 = Dense(n_outputs, activation='softmax', name='lstm_out')(lstm_3)
 
     return x, lstm_4, lstm_3
@@ -107,7 +107,7 @@ def hybrid_ens_generator(n_timesteps, n_features, n_outputs, ):
     return dense_in, ens_2, ens_1
 
 
-def dense_model_2_generator(n_timesteps, n_features, n_outputs, provided_input=None):
+def dense_1d_2_model_generator(n_timesteps, n_features, n_outputs, provided_input=None):
     # Input
     if provided_input == None:
         x = Input((n_timesteps, n_features))

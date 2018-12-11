@@ -1,0 +1,7 @@
+README_OLD.md
+
+# time_series_classification_and_ensembles
+
+This is a notebook that I made for a hands-on introduction to deep learning using keras.
+
+The main focus of this notebook is to introduce different architectures in the problem of time series classification.

@@ -40,7 +40,7 @@ def conv_1d_model_generator(n_timesteps, n_features, n_outputs, provided_input=N
     cnn1_7 = Dense(20, activation='relu')(cnn1_6)
     cnn1_8 = Dense(n_outputs, activation='softmax')(cnn1_7)
 
-    return x, cnn1_6, cnn1_8
+    return x, cnn1_8, cnn1_6
 
 
 def dense_fully_connected_model_generator(n_timesteps, n_features, n_outputs, provided_input=None):
@@ -51,7 +51,7 @@ def dense_fully_connected_model_generator(n_timesteps, n_features, n_outputs, pr
         x = provided_input
 
     # Dense
-    dense_1 = Dense(250, activation='relu')(x)
+    dense_1 = Dense(250, activation='relu', name = 'diegote')(x)
     dense_2 = Dropout(0.4)(dense_1)
     dense_3 = Dense(250, activation='relu')(dense_2)
     dense_4 = Dropout(0.2)(dense_3)
@@ -89,7 +89,7 @@ def lstm_model_generator(n_timesteps, n_features, n_outputs, provided_input=None
         x = provided_input
 
     # LSTM
-    lstm_1 = LSTM(200, activation='relu', input_shape=(n_timesteps, n_features))(x)
+    lstm_1 = LSTM(150, activation='relu', input_shape=(n_timesteps, n_features))(x)
     lstm_2 = Dropout(0.5)(lstm_1)
     lstm_3 = Dense(150, activation='relu')(lstm_2)
     lstm_4 = Dense(n_outputs, activation='softmax', name='lstm_out')(lstm_3)
@@ -137,10 +137,10 @@ def lstm_model_2_generator(n_timesteps, n_features, n_outputs, provided_input=No
         x = provided_input
 
     # LSTM
-    lstm_1 = Bidirectional(LSTM(100, activation='relu', input_shape=(n_timesteps, n_features), return_sequences=True))(x)
-    lstm_2 = Bidirectional(LSTM(100, activation='relu'))(lstm_1)
-    lstm_3 = Dropout(0.2)(lstm_2)
-    lstm_4 = Dense(120, activation='relu')(lstm_3)
+    lstm_1 = Bidirectional(LSTM(150, activation='relu', input_shape=(n_timesteps, n_features), return_sequences=True))(x)
+    lstm_2 = Bidirectional(LSTM(150, activation='relu'))(lstm_1)
+    lstm_3 = Dropout(0.3)(lstm_2)
+    lstm_4 = Dense(150, activation='relu')(lstm_3)
     lstm_5 = Dense(n_outputs, activation='softmax', name='lstm_out')(lstm_4)
 
     return x, lstm_5, lstm_4

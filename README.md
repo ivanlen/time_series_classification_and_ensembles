@@ -21,6 +21,8 @@ We use the
 [inspect_models.ipynb](https://github.com/ivanlen/time_series_classification_and_ensembles/blob/master/inspect_models.ipynb) contains an example of the implementation of a model  from [models.py](https://github.com/ivanlen/time_series_classification_and_ensembles/blob/master/models.py).
 We also show how to implement callbacks such as Reduce LR on Plateau, Early Stopping, and tensorboard in keras.
 
+[models_statistics.ipynb](https://github.com/ivanlen/time_series_classification_and_ensembles/blob/master/models_statistics.ipynb) implement different models, performs cross validation, and compute statistics of the different models metrics.
+
 ### Prerequisites
 
 [keras](https://keras.io/), [tensorflow](https://www.tensorflow.org) and (scikit-learn)[http://scikit-learn.org]
@@ -31,15 +33,10 @@ We also show how to implement callbacks such as Reduce LR on Plateau, Early Stop
 There are no installation requirements more than the needed modules.
 
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
 ## Authors
 
 * **Iván Lengyel** -
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 

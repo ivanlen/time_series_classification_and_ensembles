@@ -1,6 +1,6 @@
 # Time series classification using keras
 
-This is a notebook that I made for a hands-on introduction to deep learning using [keras](https://keras.io/).
+This is a notebook that I made for a hands-on tutorial to deep learning using [keras](https://keras.io/).
 
 The purpose of this notebook is to introduce different architectures and different layers in the problem of time series classification, and to analyze and example from end to end.
 

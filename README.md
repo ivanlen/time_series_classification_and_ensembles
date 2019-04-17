@@ -25,7 +25,7 @@ We also show how to implement callbacks such as Reduce LR on Plateau, Early Stop
 
 ### Prerequisites
 
-[keras](https://keras.io/), [tensorflow](https://www.tensorflow.org) and (scikit-learn)[http://scikit-learn.org]
+[keras](https://keras.io/), [tensorflow](https://www.tensorflow.org) and [scikit-learn](http://scikit-learn.org)
 
 
 ### Installing
